@@ -1,0 +1,20 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 56px;
+}
+
+.footer-navigation-items p {
+    color: white;
+}
+
+.footer-navigation-items {
+    display: flex;
+}
+
+.footer-navigation-items li {
+    list-style: none;
+}

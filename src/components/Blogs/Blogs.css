@@ -1,0 +1,15 @@
+.blogs {
+    height: 100%;
+    width: 60%;
+    align-content: center;
+    text-align: justify;
+    top: 70px;
+    position: relative;
+    align-items: center;
+    margin: auto;
+    z-index: -1;
+}
+
+.blog-date {
+    margin-top: 100px;
+}

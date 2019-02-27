@@ -1,0 +1,11 @@
+.about {
+    height: 100%;
+    width: 60%;
+    align-content: center;
+    text-align: justify;
+    top: 70px;
+    position: relative;
+    align-items: center;
+    margin: auto;
+    z-index: -1;
+}

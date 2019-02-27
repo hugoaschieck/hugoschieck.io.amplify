@@ -1,0 +1,37 @@
+.side-drawer {
+    height: 100%;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 300px;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, .5);
+    z-index: 200;
+}
+
+.side-drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    margin-block-start: 64px;
+}
+
+.side-drawer li {
+    padding-bottom: 0.5rem;
+
+}
+
+.side-drawer a {
+    text-decoration: none;
+    color: black;
+    padding-left: 3.0rem;
+}
+
+
+
+.side-drawer li:hover {
+    background-color: lightgrey;
+}
