@@ -1,26 +1,66 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+import SideDrawer from './components/SideDrawer/SideDrawer'
+import BackDrop from './components/BackDrop/BackDrop';
+import Footer from './components/Footer/Footer'
+import TermsConditions from './components/Footer/TermsConditions';
+
+import { BrowserRouter } from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+import Blogs from './components/Blogs/Blogs';
+import About from './components/About/About';
 
 class App extends Component {
+
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerButtonHandler = () => {
+    this.setState((previousState) => {
+      return { sideDrawerOpen: !previousState.sideDrawerOpen };
+    });
+  };
+
+  backDropClickHandler = () => {
+
+    this.setState((previousState) => {
+      return { sideDrawerOpen: !previousState.sideDrawerOpen };
+    });
+  };
+
   render() {
+
+    let sideDrawer;
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer />
+      backdrop = <BackDrop click={this.backDropClickHandler} />
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hugo's React App
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="App" style={{ height: '100%' }}>
+          <Header drawerClickHandler={this.drawerButtonHandler} />
+          {sideDrawer}
+          {backdrop}
+          <Route path="/" exact render={
+            () => {
+              return (
+                <main style={{ marginTop: '56px', marginBottom: '56px', overflowY: 'scroll' }}>
+                  <Blogs/>
+              </main>
+              );
+            }
+          } />
+
+          <Route path="/terms" exact render={TermsConditions} />
+          <Route path="/about" exact render={About} />
+
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
