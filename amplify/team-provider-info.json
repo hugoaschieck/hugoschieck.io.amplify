@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "hugoschieckioamplify-20190226154905-authRole",
+            "UnauthRoleArn": "arn:aws:iam::838636265984:role/hugoschieckioamplify-20190226154905-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::838636265984:role/hugoschieckioamplify-20190226154905-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "hugoschieckioamplify-20190226154905-deployment",
+            "UnauthRoleName": "hugoschieckioamplify-20190226154905-unauthRole",
+            "StackName": "hugoschieckioamplify-20190226154905",
+            "StackId": "arn:aws:cloudformation:us-east-1:838636265984:stack/hugoschieckioamplify-20190226154905/f47b1580-3a07-11e9-8aff-1202dd259b0c"
+        }
+    }
+}
