@@ -3,12 +3,12 @@ import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer'
 import BackDrop from './components/BackDrop/BackDrop';
 import Footer from './components/Footer/Footer'
-import TermsConditions from './components/Footer/TermsConditions';
+
 
 import { BrowserRouter } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Blogs from './components/Blogs/Blogs';
-import About from './components/About/About';
+import Routes from './components/Routes/Routes';
 
 class App extends Component {
 
@@ -55,8 +55,7 @@ class App extends Component {
             }
           } />
 
-          <Route path="/terms" exact render={TermsConditions} />
-          <Route path="/about" exact render={About} />
+          <Routes />
 
           <Footer />
         </div>
