@@ -15,7 +15,7 @@ const Header = props => (
                 <ul>
                     <li>
                         <Link to="/about" strict="true">About</Link>
-                        <a href="https://github.com/hugoaschieck/hugoschieck.io">Github</a>
+                        <a href="https://github.com/hugoaschieck/hugoschieck.io.amplify">Github</a>
                         <a href="https://www.linkedin.com/in/hugo-schieck-aa5b19179/">LinkedIn</a>
                     </li>
                 </ul>
